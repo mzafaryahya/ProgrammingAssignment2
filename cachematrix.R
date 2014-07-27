@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## "<<-" operator is used in the makeCacheMatrix to update the value of variable.
+## Lexical scoping is utilized through the variable m, by setting values in different enviroments, to cache the inverse of the matrix.
 
-## Write a short comment describing this function
+## This function creates a special "matrix" that can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
 m <- NULL
@@ -18,7 +18,8 @@ m <- NULL
 }
 
 
-## Write a short comment describing this function
+## This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. If the inverse has already been calculated,
+## then the cachesolve retrieve the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
